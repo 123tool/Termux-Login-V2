@@ -19,7 +19,25 @@ Buka Termux Anda dan jalankan perintah berikut:
 ```bash
 pkg update && pkg upgrade
 pkg install python git -y
-git clone [https://github.com/username/termux-login-vault](https://github.com/username/termux-login-vault)
-cd termux-login-vault
+git clone https://github.com/123tool/Termux-Login-V2.git
+cd Termux-Login-V2
 chmod +x setup.sh
 ./setup.sh
+```
+## Konfigurasi Manual
+​Jika Anda ingin memasangnya tanpa skrip otomatis :
+- Direktori
+  ```
+  cp login.py ~/login.py
+- Bashrc
+  ```
+  echo "python ~/login.py" >> ~/.bashrc
+
+## Penggunaan
+- ​Saat pertama kali dijalankan, sistem akan meminta Anda melakukan Registrasi.
+- ​Masukkan Username, Password, dan Security Hint (penting untuk lupa password).
+- ​Untuk login selanjutnya, Anda cukup memasukkan kredensial yang telah dibuat.
+- ​Pilih menu Forgot Password jika Anda kehilangan akses.
+
+## ​⚠️ Perhatian
+**​Jangan menghapus file .termux_vault.json di direktori home. File tersebut adalah database terenkripsi Anda. Jika file tersebut hilang, sistem akan menganggap tidak ada user dan meminta registrasi ulang.**
